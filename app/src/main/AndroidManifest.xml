@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gtappdevelopers.wallpaperapp">
 
+    <!-- Permissions -->
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -13,17 +14,25 @@
         android:roundIcon="@drawable/image"
         android:supportsRtl="true"
         android:theme="@style/Theme.WallpaperApp">
-        <activity android:name=".HomeScreenActivity">
+
+        <!-- Sign-In Activity -->
+        <activity android:name=".LoginActivity">
+            <!-- This activity will have the "LAUNCHER" intent filter -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WallpaperActivity" />
-        <activity android:name=".MainActivity">
-        </activity>
 
+        <!-- Sign-Up Activity -->
+        <activity android:name=".SignUpActivity" />
+
+        <!-- Other Activities -->
+        <activity android:name=".HomeScreenActivity" />
+        <activity android:name=".WallpaperActivity" />
+        <activity android:name=".MainActivity" />
+
+        <!-- Meta-data -->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
